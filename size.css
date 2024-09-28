@@ -227,7 +227,16 @@ a img {
     }
 
     .diya1-container, .diya2-container {
-        width: 100px;
+        width: 120px;
+        bottom: 10px; /* Ensure that the diyas don't overlap */
+    }
+
+    .diya1-container {
+        left: 5%; /* Move diya closer to the left on mobile */
+    }
+
+    .diya2-container {
+        right: 5%; /* Move diya closer to the right on mobile */
     }
 
     .balloon {
@@ -277,8 +286,18 @@ a img {
         width: 70%;
     }
 
+    /* Diya adjustments for very small screens */
     .diya1-container, .diya2-container {
-        width: 80px;
+        width: 100px;
+        bottom: 15px; /* Ensure diyas are firmly at the bottom */
+    }
+
+    .diya1-container {
+        left: 2%; /* Keep further away from the center */
+    }
+
+    .diya2-container {
+        right: 2%; /* Keep further away from the center */
     }
 
     .balloon {
