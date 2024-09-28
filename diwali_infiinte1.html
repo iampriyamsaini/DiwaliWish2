@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali!</title>
+    <link rel="stylesheet" href="size.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #514500;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            color: #ffb400;
+            font-size: 3em;
+            margin-bottom: 25px;
+            margin-top: 1px;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            border: 2px solid #ffb400;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #ffb400;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff6a00;
+        }
+
+        .wish {
+            margin-top: 30px;
+            font-size: 2.5em;
+            font-family: 'Brush Script MT', cursive;
+            color: #c5e3ffcd;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .gif {
+            width: 28%; /* Specific width for the GIF */
+            height: 250px; /* Specific height for the GIF */
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+
+        .gif-container {
+            margin-top: 20px;
+            
+        }
+
+        .diya1-container {
+            position: fixed;
+            margin-top: -195px;
+            left: 75%;
+            /* transform: translateX(-50%); */
+            /* display: flex;
+            align-items: center;
+            width: 300px; */
+            
+        }
+
+        .diya2-container {
+            position: fixed;
+            margin-top: -195px;
+            right: 75%;
+            /* transform: translateX(-50%); */
+            /* display: flex; */
+            /* align-items: center; */
+            /* width: 300px; */
+        }
+
+        .diya1 {
+            width: 150px;
+            height: 160px;
+            /* position: fixed; */
+            /* bottom: 15px; */ 
+            /* margin-left: 75%; */
+            /* margin-top: -30px; */
+            /* transform: translateX(30%); */
+        }
+
+
+        .diya2 {
+            width: 150px;
+            height: 160px;
+            /* position: fixed; */
+            /* bottom: 15px; */ 
+            /* margin-right:75%; */
+            /* margin-top: -75px; */
+            /* transform: translateX(30%); */
+        }
+
+
+        /* https://media0.giphy.com/media/h6Vl5MtG4h9R0k7ZDw/giphy.gif */
+
+        /* Balloon Animation */
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            width: 50px;
+            height: 80px;
+            background-color: #ffb400;
+            border-radius: 50%;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .balloon::after {
+            content: "";
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            width: 2px;
+            height: 50px;
+            background-color: #fff;
+            transform: translateX(-50%);
+        }
+
+        .balloon:nth-child(2) {
+            background-color: #ff6a00;
+            left: 20%;
+            animation-duration: 6s;
+            animation-delay: 0.2s;
+        }
+
+        .balloon:nth-child(3) {
+            background-color: #d13fff;
+            left: 40%;
+            animation-duration: 6s;
+            animation-delay: 0.7s;
+        }
+
+        .balloon:nth-child(4) {
+            background-color: #33c1ff;
+            left: 60%;
+            animation-duration: 6.5s;
+            animation-delay: 0.5s;
+        }
+
+        .balloon:nth-child(5) {
+            background-color: #4cff33;
+            left: 80%;
+            animation-duration: 5.5s;
+            animation-delay: 1.0s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-1200px);
+            }
+        }
+
+        /* Firework Animation */
+        .firework {
+            position: absolute;
+            width: 50px;
+            height: 65px;
+            border-radius: 50%;
+            background-color: rgb(243, 220, 67);
+            animation: explode 5s linear;
+            
+        }
+
+        @keyframes explode {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(3);
+                opacity: 0;
+            }
+        }
+
+        
+        
+
+        @keyframes glow {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        
+
+        /* Follow Section Styling */
+        .follow-container {
+            position: fixed;
+            bottom: 15px;
+            left: 92%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            width: 300px;
+        }
+
+        .follow-text {
+            font-size: 18px;
+            margin-right: 4px;
+            color: rgb(222, 200, 200);
+            font-weight: 900;
+            font-family: Copperplate, Papyrus, fantasy;
+            font-size: 19px;
+        }
+
+
+
+
+
+        .Made-container {
+            position: fixed;
+            bottom:20px;
+            right: 52%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            width: 300px;
+        }
+
+        .Made-text {
+            font-size: 18px;
+            margin-right: 4px;
+            color: rgb(222, 200, 200);
+            font-weight: 900;
+            font-family: Copperplate, Papyrus, fantasy;
+            font-size: 19px;
+        }
+
+
+
+
+
+        
+
+        a {
+            margin-left: 7px;
+        }
+
+        img {
+            width: 22px;
+            height: 22px;
+            vertical-align: middle;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Happy Diwali Celebration</h1>
+    <p>Enter your name and click the button to receive a special Diwali wish!</p>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="showWish()">Wish Me!</button>
+
+    <div class="wish" id="wishMessage"></div>
+    <div class="gif-container" id="diwaliGif"></div>
+    <div id="balloonsContainer"></div>
+    <div id="fireworksContainer"></div>
+    <div class = "diya1-container" id="diyaGif1"></div>
+    <div class = "diya2-container" id="diyaGif2"></div>
+
+    <script>
+        function showWish() {
+            const name = document.getElementById("nameInput").value;
+            if (name) {
+                document.getElementById("wishMessage").innerHTML = `🎉 You are the special one for me. Wishing you a very Happy Diwali, ${name}! 🎉`;
+
+                // Insert the direct link to the GIF instead of the iframe
+                document.getElementById("diwaliGif").innerHTML = `
+                    <img src="https://media.giphy.com/media/szuiyQZEcP9D6uNglM/giphy.gif" alt="Happy Diwali" class="gif">
+                `;
+
+                document.getElementById("diyaGif1").innerHTML = `
+                    <img src="https://media0.giphy.com/media/h6Vl5MtG4h9R0k7ZDw/giphy.gif" alt="Diya Gif" class="diya1">
+                `;
+
+                document.getElementById("diyaGif2").innerHTML = `
+                    <img src="https://media0.giphy.com/media/h6Vl5MtG4h9R0k7ZDw/giphy.gif" alt="Diya Gif" class="diya2">
+                `;
+
+                // Create and show balloons
+                const balloonsContainer = document.getElementById("balloonsContainer");
+                balloonsContainer.innerHTML = '';
+                for (let i = 0; i < 5; i++) {
+                    const balloon = document.createElement('div');
+                    balloon.className = 'balloon';
+                    balloonsContainer.appendChild(balloon);
+                }
+
+                // Create and show fireworks
+                const fireworksContainer = document.getElementById("fireworksContainer");
+                fireworksContainer.innerHTML = '';
+                for (let i = 0; i < 10; i++) {
+                    const firework = document.createElement('div');
+                    firework.className = 'firework';
+                    firework.style.left = `${Math.random() * 100}%`;
+                    firework.style.top = `${Math.random() * 50}%`;
+                    fireworksContainer.appendChild(firework);
+
+                    // Remove firework after animation
+                    setTimeout(() => {
+                        firework.remove();
+                    }, 5000);
+                }
+
+                // Create and show diyas
+                // const diyasContainer = document.getElementById("diyasContainer");
+                // diyasContainer.innerHTML = '';
+                // for (let i = 0; i < 3; i++) {
+                //     const diya = document.createElement('div');
+                //     diya.className = 'diya';
+                //     diya.style.left = `${20 + i * 30}%`;
+                //     diyasContainer.appendChild(diya);
+                // }
+
+            } else {
+                document.getElementById("wishMessage").innerHTML = 'Please enter your name!';
+                document.getElementById("diwaliGif").innerHTML = '';
+                document.getElementById("balloonsContainer").innerHTML = '';
+                document.getElementById("fireworksContainer").innerHTML = '';
+                document.getElementById("diyasContainer").innerHTML = '';
+            }
+        }
+    </script>
+
+    <!-- Follow section -->
+
+    <div class="follow-container">
+        <span class="follow-text">Follow me on</span>
+        <a href="https://www.linkedin.com/in/priyam-saini-870b2a297/" target="_blank">
+            <img src="C:\Users\priya\Downloads\pngimg.com - linkedIn_PNG8.png" alt="LinkedIn logo">
+        </a>
+        <a href="https://www.instagram.com/priyamsaini9/" target="_blank">
+            <img src="C:\Users\priya\Downloads\pngimg.com - instagram_PNG9.png" alt="Instagram logo">
+        </a>
+        <a href="https://github.com/iampriyamsaini" target="_blank">
+            <img src="C:\Users\priya\Pictures\Screenshots\Screenshot 2024-09-26 234301.png" alt="Github logo">
+        </a>
+    </div>
+
+    <div class="Made-container">
+        <span class="Made-text">Made by Priyam</span>
+        </div>
+
+</body>
+
+</html>
